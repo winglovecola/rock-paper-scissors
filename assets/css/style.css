@@ -38,6 +38,8 @@ header {
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
+  height: 330px;
+  padding-top:20px;
 }
 
 .user-hand:hover {
@@ -53,6 +55,8 @@ header {
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
+  height: 330px;
+  padding-top:20px;
 
 }
 
