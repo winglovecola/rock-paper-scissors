@@ -11,7 +11,7 @@ https://winglovecola.github.io/rock-paper-scissors
 
 ## Preview
 
-![Website screenshot](https://github.com/winglovecola/secure-key/blob/main/assets/images/screenshot1.jpg?raw=true)
+![Website screenshot](https://github.com/winglovecola/rock-paper-scissors/blob/main/assets/images/screenshot.jpg?raw=true)
 
 
 ## License
