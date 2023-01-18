@@ -24,16 +24,46 @@ header {
   margin-bottom: 30px;
 }
 
-header.ng-hide {
-  opacity: 0;
+#play-arena {
+
+  display: flex;
+  margin: auto;
+  margin-top: 150px;
 }
 
-header.ng-hide-add, header.ng-hide-remove {
-  transition: all linear 0.5s;
+#user-side {
+
+  flex:1;
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#cpu-side {
+  flex:1;
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+
 }
 
 
+#score {
 
+  display: block;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+#battle-msg {
+
+  display: block;
+  font-size: 45px;
+  text-align: center;
+}
 
 /* main section */
 main {
@@ -42,115 +72,7 @@ main {
   min-height: 700px;
 }
 
-main section, main div {
-  display: block;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
-}
 
-main section.ng-hide {
-  opacity: 0;
-}
-
-main section.ng-hide-add, main section.ng-hide-remove {
-  transition: all linear 0.5s;
-}
-
-main section h2 {
-  font-size: 25px;
-}
-
-
-#char-num-tips {
-  font-size: 25px;
-}
-
-
-
-
-/* choose password character length */
-.btn-change-char {
-
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
-  
-}
-
-.input-change-char {
-  width: 70px;
-  height: 50px;
-  font-size: 25px;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  min-width: 200px;
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-
-}
-
-
-
-
-/* choose password character type */
-#char-type-section ul {
-
-  display: inline-block;
-  margin: auto;
-  list-style: none;
-}
-
-
-#char-type-section li {
-
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: left;
-}
-
-input[type='checkbox'] {
-  transform: scale(2);
-}
-
-.warning {
-  font-size: 25px;
-  color: red;
-}
-
-
-/* password display section */
-#secure-key-div {
-
-  display: block;
-  max-width: 80%;
-  min-width: 700px;
-  min-height: 160px;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 30px;
-  padding: 50px;
-  margin: auto;
-  word-wrap: break-word;
-  user-select: all;
-}
 
 
 /* footer section */

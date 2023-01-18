@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Password Generator - Secure Key</title>
+    <title>Paper, Rock, Scissors</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,8 +15,8 @@
 
 
     <!-- header section -->
-    <header ng-show="showItem.header">
-      <h1>Secure Key</h1>
+    <header>
+      <h1>Rock, Paper, Scissors</h1>
     </header>
     
 
@@ -26,53 +26,43 @@
       
       
       <div ng-show="showItem.keygenHeaderCard" class="card-header">
-        <h2>Generate a secure password base on your preference!</h2>
+        <h2>You can never beat me!</h2>
       </div>
+      <div id="score">Your Score: Win: {{score.userWin}} Tie: {{score.userTie}} Lost: {{score.userLost}}</div>
+      <div id="battle-msg">{{battleMsg}}</div>
+      
+      
+      <section id="play-arena">
 
-      <div ng-show="showItem.keygenBtn" class="generate-btn">
-        <button id="generate" class="btn" ng-click="keygenStart ()">Generate Password</button>
-      </div>
-
-      <!-- choose password character length -->
-      <section ng-show="showItem.keygenPrefChar" class="keygen-pref-char">
-        <h2>Choose how many characters for your password.</h2>
-        <div id="char-num-tips">Min 8 and Max 128 characters</div>
-        <br><br>
-        <button class="btn-change-char" ng-click="kengenCharNumSub ()">-</button> <input type="text" class="input-change-char" ng-model="kengenCharNum" minlength="1" maxlength="3"/> <button class="btn-change-char" ng-click="kengenCharNumAdd ()">+</button>
+    
+        <div id="user-side">
         
-        <br><br>
-        <button ng-show="showItem.keygenNextBtn" class="btn" ng-click="keygenPrefChar ()">Next</button>
-      </section>
-
-
-
-      <!-- choose password character type -->
-      <section id="char-type-section" ng-show="showItem.keygenPrefType" class="keygen-pref-type">
-        <h2>Choose what type of characters are in your password.</h2>
-        <div class="warning" ng-show="showItem.keygenPrefTypeWarning">At least one type has to be selected</div>
-        <ul>
-          <li><input type="checkbox" ng-model="cbKeygenType.lowercase">&nbsp;&nbsp;&nbsp;Lowercase</li>
-          <li><input type="checkbox" ng-model="cbKeygenType.uppercase">&nbsp;&nbsp;&nbsp;Uppercase</li>
-          <li><input type="checkbox" ng-model="cbKeygenType.numeric">&nbsp;&nbsp;&nbsp;Numeric</li>
-          <li><input type="checkbox" ng-model="cbKeygenType.specialChar">&nbsp;&nbsp;&nbsp;Special Characters</li>
-        </ul>
-
-        <br><br>
+  
+          <img id="user-rock" src="./assets/images/rock.png" ng-show="showItem.userRock" ng-click="userPickRock ()">
+          <img id="user-paper" src="./assets/images/paper.png" ng-click="userPickPaper ()" ng-show="showItem.userPaper">
+          <img id="user-scissors" src="./assets/images/scissors.png" ng-click="userPickScissors ()" ng-show="showItem.userScissors">
+    
+  
+        </div>
+  
         
-        <button class="btn" ng-click="keygenConfirm ()">{{btns.keygenConfirmBtn}}</button>
+        <div id="cpu-side">
+          <img id="cpu-rock" src="./assets/images/rock.png" ng-show="showItem.cpuRock">
+          <img id="cpu-paper" src="./assets/images/paper.png" ng-show="showItem.cpuPaper">
+          <img id="cpu-scissors" src="./assets/images/scissors.png" ng-show="showItem.cpuScissors">
+        </div>
+  
+
       </section>
 
 
-      <!-- password display section -->
-      <section class="keygen-display" ng-show="showItem.keygenSecureKeyDisplay">
-        <div id="secure-key-div">{{secureKey}}</div>
-      </section>
+
     </main>
 
 
     <!-- footer section -->
     <footer>
-      Thank you for using!
+      Thank you for playing!
     </footer>
 
 
