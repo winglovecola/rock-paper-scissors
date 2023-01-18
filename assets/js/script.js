@@ -68,8 +68,9 @@ var myapp = angular.module("app", ['ngAnimate']);
       $scope.cpuHandRotation = false;
 
 
-      $scope.cpuRandomPicked = getRandomArbitrary(0, 2);
+      $scope.cpuRandomPicked = Math.round (getRandomArbitrary(0, 2));
       
+
       //random a cpu pick
       if ($scope.cpuRandomPicked == 0)
         $scope.cpuPicked = "R";
