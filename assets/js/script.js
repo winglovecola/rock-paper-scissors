@@ -68,7 +68,7 @@ var myapp = angular.module("app", ['ngAnimate']);
       $scope.cpuHandRotation = false;
 
 
-      $scope.cpuRandomPicked = Math.round (getRandomArbitrary(0, 2));
+      $scope.cpuRandomPicked = getRandomArbitrary(0, 2);
       
 
       //random a cpu pick
@@ -204,5 +204,5 @@ var myapp = angular.module("app", ['ngAnimate']);
 
 //random number functions
 function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.round (Math.random() * (max - min) + min);
 }
